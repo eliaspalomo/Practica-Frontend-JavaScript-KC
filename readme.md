@@ -1,0 +1,1 @@
+falta el archivo de db, para la carag de la practica del procfesor  y las imagenes

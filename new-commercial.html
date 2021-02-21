@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Nuevo Anuncio</title>
+</head>
+<body>
+    <div class="lds-ring "><div></div><div></div><div></div><div></div></div>
+
+    <div class="global-errors hidden"></div>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <h1 class="tittle">Nuevo Anuncio</h1>
+                <form>
+                    <textarea name="message" class="textarea" placeholder="Escribe el anuncio aqui..." required></textarea>
+                    <input type="file" name="file" accept="image/*">
+                    <button class="button is-primary is-pulled-right" disabled>Publicar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/new-commercial.js"></script>
+</body>
+</html>
