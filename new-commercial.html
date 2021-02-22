@@ -17,7 +17,15 @@
             <div class="column is-two-thirds">
                 <h1 class="tittle">Nuevo Anuncio</h1>
                 <form>
-                    <textarea name="message" class="textarea" placeholder="Escribe el anuncio aqui..." required></textarea>
+                    <label for="articulo">Nombre de artículo:</label>
+                    <input type="text" id="articulo" name="articulo" required/><br>
+                    <label for="price">Precio:</label>
+                    <input type="text" id="price" name="price" required/><br>
+                    <label for="venta">En venta:</label>
+                    <input type="radio" id="venta" name="venta" value=true checked></input>
+                    <label for="venta">Para comprar:</label>
+                    <input type="radio" id="venta" name="venta" value=false ></input><br>
+                    <textarea name="description" class="textarea" placeholder="Escribe la descripción..."></textarea><br>
                     <input type="file" name="file" accept="image/*">
                     <button class="button is-primary is-pulled-right" disabled>Publicar</button>
                 </form>

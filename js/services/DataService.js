@@ -98,7 +98,7 @@ export default {
 
                 return {
                     id: commercial.id,
-                    name: commercial.name.replace(/(<([^>]+)>)/gi, ""),
+                    articulo: commercial.articulo.replace(/(<([^>]+)>)/gi, ""),
                     price: commercial.price,
                     owner: user.username || 'desconocido',
                     sale : commercial.sale,
@@ -121,11 +121,12 @@ export default {
 
                 return {
                     id: commercial.id,
-                    name: commercial.name.replace(/(<([^>]+)>)/gi, ""),
-                    price: commercial.price,
+                    articulo: commercial.articulo.replace(/(<([^>]+)>)/gi, ""),
+                    price: commercial.price.replace(/(<([^>]+)>)/gi, ""),
                     owner: user.username || 'desconocido',
                     sale : commercial.sale,
                     image: commercial.image || null,
+                    description: commercial.description.replace(/(<([^>]+)>)/gi, ""),
                     canBeDeleted: currentUser ? currentUser.userId === commercial.userId : false
                 }   
             });

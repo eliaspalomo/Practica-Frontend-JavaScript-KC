@@ -1,7 +1,7 @@
 import BaseController from './BaseController.js';
 import dataService from '../services/DataService.js';
 
-export default class RegisterFormController extends BaseController {
+export default class NewCommercialFormController extends BaseController {
     constructor(element){
         super(element);
         this.checkIfUserIsLogged();
@@ -24,7 +24,7 @@ export default class RegisterFormController extends BaseController {
     }
     
     attachEventListeners(){
-        const textarea= this.element.querySelector('textarea');
+        const textarea = this.element.querySelector('textarea');
         textarea.addEventListener('keyup', () =>{
             const button = this.element.querySelector('button');
             if(this.element.checkValidity()){
@@ -36,8 +36,12 @@ export default class RegisterFormController extends BaseController {
 
         this.element.addEventListener('submit', async (event) =>{
             event.preventDefault();
+            debugger;
             const commercial = {
-                message: this.element.elements.message.value,
+                articulo: this.element.elements.articulo.value,
+                price: this.element.elements.price.value,
+                venta: this.element.elements.venta.value,
+                description: this.element.elements.description.value,
                 image: null
             }
             if(this.element.elements.file.files.length > 0){
