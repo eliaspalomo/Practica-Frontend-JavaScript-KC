@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', async (event) => {
     const loader = document.querySelector('.lds-ring');
     new LoaderController(loader);
 
-    const element = document.querySelector('.posts-list');
+    const element = document.querySelector('.commercial-list');
     const controller = new CommercialListController(element);
     controller.loadCommercial();
 

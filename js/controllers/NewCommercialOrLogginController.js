@@ -11,7 +11,7 @@ export default class NewCommercialOrLogginController extends BaseController{
     async checkIfUserIsLogged(){
         const usesIsLogged = await dataService.isUserLogged();
         if(usesIsLogged) {
-            const newCommercialButton = this.element.querySelector('.new-commercial-logout-button');
+            const newCommercialButton = this.element.querySelector('.new-commercial-logoff-button');
             newCommercialButton.classList.remove('is-hidden');
         } else {
             const loginRegisterButton = this.element.querySelector('.login-register-buttons');
@@ -20,8 +20,8 @@ export default class NewCommercialOrLogginController extends BaseController{
     }
 
     attachEventListener(){
-        const buttonLogout = this.element.querySelector('.logout');
-        buttonLogout.addEventListener('click', event =>{
+        const buttonLogoff = this.element.querySelector('.logoff');
+        buttonLogoff.addEventListener('click', event =>{
             dataService.deleteToken()
             window.location.href = '/'; 
         })

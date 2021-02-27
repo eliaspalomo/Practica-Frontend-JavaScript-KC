@@ -15,22 +15,56 @@
     <div class="container">
         <div class="columns">
             <div class="column is-two-thirds">
-                <h1 class="tittle">Nuevo Anuncio</h1>
+                <h1 class="title">Nuevo Anuncio</h1>
                 <form>
-                    <label for="articulo">Nombre de artículo:</label>
-                    <input type="text" id="articulo" name="articulo" required/><br>
-                    <label for="price">Precio:</label>
-                    <input type="text" id="price" name="price" required/><br>
-                    <label for="venta">En venta:</label>
-                    <input type="radio" id="venta" name="venta" value=true checked></input>
-                    <label for="venta">Para comprar:</label>
-                    <input type="radio" id="venta" name="venta" value=false ></input><br>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Nombre artículo:</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input class="input" type="text" id="articulo" name="articulo" required placeholder="Nombre artículo">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Precio:</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input class="input" type="text" id="price" name="price" required placeholder="Precio">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control">
+                        <label class="radio">
+                          En venta:
+                          <input type="radio" id="venta" name="venta" value=true checked>
+                        </label>
+                        <label class="radio">
+                            Para comprar:
+                          <input type="radio" id="venta" name="venta" value=false >
+                        </label>
+                    </div>
+
+
                     <textarea name="description" class="textarea" placeholder="Escribe la descripción..."></textarea><br>
                     <input type="file" name="file" accept="image/*">
+                    
                     <button class="button is-primary is-pulled-right" disabled>Publicar</button>
-                </form>
+                </form><br>
+                <button class="button back is-success">
+                    Volver
+                </button>
             </div>
-        </div>
+    </div>
     </div>
     <script type="module" src="js/new-commercial.js"></script>
 </body>

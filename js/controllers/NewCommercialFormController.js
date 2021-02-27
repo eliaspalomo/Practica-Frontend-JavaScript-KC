@@ -6,7 +6,7 @@ export default class NewCommercialFormController extends BaseController {
         super(element);
         this.checkIfUserIsLogged();
         this.attachEventListeners();
-        this.focusInTextArea();
+        this.focusInArticulo();
     }
 
     async checkIfUserIsLogged(){
@@ -18,9 +18,9 @@ export default class NewCommercialFormController extends BaseController {
         }
     }
 
-    focusInTextArea(){
-        const textArea = this.element.querySelector('textarea');
-        textArea.focus();
+    focusInArticulo(){
+        const articulo = this.element.querySelector('input#articulo');
+        articulo.focus();
     }
     
     attachEventListeners(){
@@ -36,7 +36,7 @@ export default class NewCommercialFormController extends BaseController {
 
         this.element.addEventListener('submit', async (event) =>{
             event.preventDefault();
-            debugger;
+            
             const commercial = {
                 articulo: this.element.elements.articulo.value,
                 price: this.element.elements.price.value,

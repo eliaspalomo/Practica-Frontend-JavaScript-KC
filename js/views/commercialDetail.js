@@ -1,4 +1,9 @@
-export const commercialView = (commercial) => {
+export const commercialDetail = (commercial) => {
+  let deleteButtonHTML = '';
+  if(commercial.canBeDeleted){
+    deleteButtonHTML = '<button class = "button is-danger">Borrar</button>';
+  }
+  
   let imgHTML = '';
   if(commercial.image){
     imgHTML = `
@@ -24,19 +29,15 @@ export const commercialView = (commercial) => {
         </div>
       </div>
       <div class="content">
+        <p>${commercial.description}</p>
+        <br>
         <p>${commercial.price}</p>
         <br>
         <p>${type}</p>
         <br>
+        ${deleteButtonHTML}
       </div>
     </div>
     ${imgHTML}
   </div>`;
 };
-
-export const noCommercial = () => {
-  return `<div>
-    No hay anuncios
-  </div>`;
-
-}

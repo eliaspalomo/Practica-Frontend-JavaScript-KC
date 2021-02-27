@@ -1,6 +1,7 @@
 import LoaderController from './controllers/LoaderController.js';
 import ErrorController from './controllers/ErrorController.js';
-import NewCommercialFormController from './controllers/NewCommercialFormController.js'
+import NewCommercialFormController from './controllers/NewCommercialFormController.js';
+import BackController from './controllers/BackController.js';
 
 window.addEventListener('DOMContentLoaded', () => {
     const loader = document.querySelector('.lds-ring');
@@ -11,4 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const formElement = document.querySelector('form');
     new NewCommercialFormController(formElement);
+
+    const backButton = document.querySelector('.back');
+    new BackController(backButton);
 })

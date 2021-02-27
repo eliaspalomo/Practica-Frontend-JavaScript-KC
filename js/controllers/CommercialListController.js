@@ -11,6 +11,9 @@ export default class CommercialListController extends BaseController {
                 const article = document.createElement('article');
                 article.innerHTML = commercialView(commercial);
                 this.element.appendChild(article);
+                article.addEventListener('click', async ev => {
+                    window.location.href = `/commercialDetail.html?id=${commercial.id}` ; 
+                });
             }
         }else{
             const article = document.createElement('article');

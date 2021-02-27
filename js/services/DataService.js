@@ -88,7 +88,6 @@ export default {
     },
 
     getCommercials: async function() {
-        const currentUser = await this.getUser();
         const url = `${BASE_URL}/api/messages?_expand=user&_sort=id&_order=desc`
         const response = await fetch(url);
         if (response.ok) {
@@ -99,7 +98,7 @@ export default {
                 return {
                     id: commercial.id,
                     articulo: commercial.articulo.replace(/(<([^>]+)>)/gi, ""),
-                    price: commercial.price,
+                    price: commercial.price.replace(/(<([^>]+)>)/gi, ""),
                     owner: user.username || 'desconocido',
                     sale : commercial.sale,
                     image: commercial.image || null
@@ -110,9 +109,9 @@ export default {
         }
     },
 
-    getCommercial: async function() {
+    getCommercial: async function(commercialID) {
         const currentUser = await this.getUser();
-        const url = `${BASE_URL}/api/messages/${commercial.id}`;
+        const url = `${BASE_URL}/api/messages?${commercialID}`;
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
