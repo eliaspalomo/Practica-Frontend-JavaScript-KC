@@ -15,6 +15,6 @@ window.addEventListener('DOMContentLoaded', async (event) => {
     const errorsElement = document.querySelector('.global-errors');
     new ErrorController(errorsElement);
 
-    const newCommercialButton = document.querySelector('.new-commercial');
+    const newCommercialButton = document.querySelector('.button-commercial');
     new NewCommercialOrLogginController(newCommercialButton);
 });

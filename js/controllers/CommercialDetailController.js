@@ -9,6 +9,19 @@ export default class CommercialDetailController extends BaseController {
         if(commercial.length !== 0) {
             const article = document.createElement('article');
             article.innerHTML = commercialDetail(commercial);
+
+            const deleteButton = article.querySelector('button');
+            if(deleteButton){
+                deleteButton.addEventListener('click', async ev => {
+                    const deleteConfirmed = confirm("¿Seguro que quieres borrarlo?");
+                    if (deleteConfirmed) {
+                        await dataService.deleteCommercial(commercial);
+                        article.remove();
+                        window.location.href = '/';
+                    }
+                });
+            }
+
             this.element.appendChild(article);
         }else{
             throw new Error('Datos no cargado');

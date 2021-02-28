@@ -40,7 +40,6 @@ export default class LoginFormController extends BaseController {
             input.addEventListener('keyup', event =>{
                 if(input.validity.valid){
                     input.classList.add('is-success');
-
                     input.classList.remove('is-danger');
                 }else{
                     input.classList.add('is-danger');

@@ -24,15 +24,29 @@ export default class NewCommercialFormController extends BaseController {
     }
     
     attachEventListeners(){
-        const textarea = this.element.querySelector('textarea');
-        textarea.addEventListener('keyup', () =>{
-            const button = this.element.querySelector('button');
-            if(this.element.checkValidity()){
-                button.removeAttribute('disabled');
-            }else {
-                button.setAttribute('disabled', true);
+        const article = this.element.querySelector('input#articulo');
+        article.addEventListener('keyup', () =>{
+            this.validateElement()
+            if(article.validity.valid){
+                article.classList.add('is-success');
+                article.classList.remove('is-danger');
+            }else{
+                article.classList.add('is-danger');
+                article.classList.remove('is-success');
             }
         });
+
+        const price = this.element.querySelector('input#price');
+        price.addEventListener('keyup', () =>{
+            this.validateElement()
+            if(price.validity.valid){
+                price.classList.add('is-success');
+                price.classList.remove('is-danger');
+            }else{
+                price.classList.add('is-danger');
+                price.classList.remove('is-success');
+            }
+         });
 
         this.element.addEventListener('submit', async (event) =>{
             event.preventDefault();
@@ -57,6 +71,15 @@ export default class NewCommercialFormController extends BaseController {
                 this.publish(this.events.FINISH_LOADING);
             }
         });
+    }
+    
+    validateElement(){
+        const button = this.element.querySelector('button');
+        if(this.element.checkValidity()){
+            button.removeAttribute('disabled');
+        }else {
+            button.setAttribute('disabled', true);
+        }
     }
 }
 
