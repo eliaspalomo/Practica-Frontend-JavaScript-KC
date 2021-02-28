@@ -1,0 +1,111 @@
+{
+  "messages": [
+    {
+      "articulo": "Recreativa",
+      "price": "200 €",
+      "venta": "true",
+      "description": "simulador de recreativas, con mas de 200 juegos y como mucho dos jugadores",
+      "image": "http://127.0.0.1:8000//file-1614421924801.jpg",
+      "userId": 3,
+      "updatedAt": "2021-02-27T10:32:04.846Z",
+      "id": 3
+    },
+    {
+      "articulo": "Catan",
+      "price": "30 €",
+      "venta": "true",
+      "description": "Juego de tablero, mundialmente conocido de comercio y puntos de victoria.",
+      "image": "http://127.0.0.1:8000//file-1614506955045.jpg",
+      "userId": 1,
+      "updatedAt": "2021-02-28T10:09:15.282Z",
+      "id": 4
+    },
+    {
+      "articulo": "Bicicleta de carreras",
+      "price": "300 €",
+      "venta": "false",
+      "description": "Necesito Bicicleta de carreras, como mucho puedo pagar 300€",
+      "image": "http://127.0.0.1:8000//file-1614507718618.jpg",
+      "userId": 1,
+      "updatedAt": "2021-02-28T10:21:58.635Z",
+      "id": 5
+    },
+    {
+      "articulo": "Bicicleta de paseo",
+      "price": "100 €",
+      "venta": "true",
+      "description": "Bicicleta muy mona para pasear en cualquier estación del año",
+      "image": "http://127.0.0.1:8000//file-1614509189792.jpg",
+      "userId": 2,
+      "updatedAt": "2021-02-28T10:46:29.814Z",
+      "id": 6
+    },
+    {
+      "articulo": "Pantalla led",
+      "price": "500 €",
+      "venta": "true",
+      "description": "Pantalla led ultra HDD, 16kk, ideal para cualquier salon",
+      "image": "http://127.0.0.1:8000//file-1614509262274.jpg",
+      "userId": 2,
+      "updatedAt": "2021-02-28T10:47:42.287Z",
+      "id": 7
+    },
+    {
+      "articulo": "Móvil retro",
+      "price": "100 €",
+      "venta": "true",
+      "description": "Móvil retro, este móvil no te va a fallar y seguro que cuando se cae no se rompe ninguno de sus componentes.",
+      "image": "http://127.0.0.1:8000//file-1614509354765.jpg",
+      "userId": 2,
+      "updatedAt": "2021-02-28T10:49:14.777Z",
+      "id": 8
+    },
+    {
+      "articulo": "Coche",
+      "price": "5000 €",
+      "venta": "true",
+      "description": "Vendo coche porque ya no lo uso para nada",
+      "image": "http://127.0.0.1:8000//file-1614509414422.jpg",
+      "userId": 2,
+      "updatedAt": "2021-02-28T10:50:14.436Z",
+      "id": 9
+    },
+    {
+      "articulo": "Tablet",
+      "price": "400 €",
+      "venta": "true",
+      "description": "Ultimo modelo, para poder jugar y ver todo tipo de periódicos.",
+      "image": "http://127.0.0.1:8000//file-1614509519522.jpg",
+      "userId": 3,
+      "updatedAt": "2021-02-28T10:51:59.536Z",
+      "id": 10
+    },
+    {
+      "articulo": "Patines",
+      "price": "20 €",
+      "venta": "false",
+      "description": "Compro patines retro, para ir volando al trabajo",
+      "image": "http://127.0.0.1:8000//file-1614509571350.jpg",
+      "userId": 3,
+      "updatedAt": "2021-02-28T10:52:51.403Z",
+      "id": 11
+    }
+  ],
+  "users": [
+    {
+      "username": "usuario1@gmail.com",
+      "password": "$2b$10$uECV7ujrux9xY0V/9GaMIuHnxdRRbPSCNp2.GX5SiGXRrBaAD5KlK",
+      "id": 1
+    },
+    {
+      "username": "usuario2@gmail.com",
+      "password": "$2b$10$uECV7ujrux9xY0V/9GaMIuHnxdRRbPSCNp2.GX5SiGXRrBaAD5KlK",
+      "id": 2
+    },
+    {
+      "username": "usuario3@gmail.com",
+      "password": "$2b$10$0IzyuO1yTINm3xWiP.w0l.lRl6KF5qYbFg4FQewHuPw0N7Lvvf8Be",
+      "id": 3
+    }
+  ]
+}

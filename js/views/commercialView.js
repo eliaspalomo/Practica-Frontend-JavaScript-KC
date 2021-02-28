@@ -18,6 +18,7 @@ export const commercialView = (commercial) => {
   
   return `<div class="card">
     <div class="card-content">
+    ${imgHTML}
       <div class="media">
         <div class="media-content">
           <p class="title is-4">${commercial.articulo}</p>
@@ -30,7 +31,6 @@ export const commercialView = (commercial) => {
         <br>
       </div>
     </div>
-    ${imgHTML}
   </div>`;
 };
 
